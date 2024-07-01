@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oxanium', cursive;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(to bottom, #6ab7f5, #fff);
+  min-height: 100vh;
+}
+
+main {
+  display: inline-block;
+  margin-top: 2%;
+  padding: 15px;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.pokedex {
+  width: 100%;
+}
+
+.pkmn__image {
+  position: absolute;
+  bottom: 55%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  height: 18%;
+}
+
+.pkmn__data {
+  position: absolute;
+  font-weight: 600;
+  color: #aaa;
+  top: 54.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(8px, 5vw, 25px);
+}
+
+.pkmn__name {
+  color: #3a444d;
+  text-transform: capitalize;
+}
+
+.pkmn__entry {
+  display: none;
+}
+
+.form {
+  position: absolute;
+  width: 80%;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.input__search {
+  width: 100%;
+  padding: 4%;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #3a444d;
+  font-size: clamp(8px, 5vw, 1rem);
+  box-shadow: -1px 2px 1px 1px #888, -3px 5px 1px 1px #333;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button {
+  flex: 1;
+  padding: 4%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: clamp(8px, 5vw, 1rem);
+  font-weight: 600;
+  color: white;
+  background-color: #444;
+  box-shadow: -1px 2px 1px 1px #222, -3px 5px 1px 1px #000;
+  min-width: 45px;  /* Ensure buttons have a minimum width */
+}
+
+.button:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 0.9rem;
+}
+
+.speecher-light,
+.speecher-light-on {
+  position: absolute;
+  height: 10%;
+  width: 15%;
+  border-radius: 50%;
+  top: 4.2%;
+  left: 12.4%;
+}
+
+.speecher-light {
+  background-color: #fffff00;
+}
+
+.speecher-light-on {
+  background-color: #ffffff55;
+  box-shadow: 0px 0px 15px #fff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .pkmn__image {
+    height: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pkmn__image {
+    height: 25%;
+  }
+  .pkmn__data {
+    font-size: clamp(10px, 4vw, 20px);
+  }
+  .input__search {
+    font-size: clamp(10px, 4vw, 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .pkmn__image {
+    height: 30%;
+  }
+  .pkmn__data {
+    font-size: clamp(12px, 4vw, 18px);
+  }
+  .input__search {
+    font-size: clamp(12px, 4vw, 1rem);
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    width: 100%;
+    margin-bottom: 10px; /* Ensure spacing between buttons */
+  }
+}
